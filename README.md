@@ -7,6 +7,8 @@ Input a bookname, and it will generate a sorted list of other books that other r
 
 ## Use this app and find out new books to read!
 
+## https://polonglin.shinyapps.io/book-recommender/
+
 ### How the app works:
 
 You input the name of a book (MyBook)that you have previously enjoyed, and the app will return a list of books (Book A, B, C) that others have read as well. A "sim" score is produced which is a simple correlation score (between -1 and 1) between the ratings of common reviewers for {MyBook and Book A}, {MyBook and Book B}, {MyBook and Book C}. The app sorts the books (A, B, C) by "sim" in decreasing order. A high "sim" (e.g., 0.5 to 1.0) indicates that those who read both books rated them very similarly. A negative "sim" indicates that those who read both books rated them in opposite ways (e.g., high ratings for MyBook but low ratings for Book X). A "sim" close to zero indicates that a strong relationship between the ratings of both books were unobserved.
