@@ -1,0 +1,35 @@
+library(shiny)
+shinyUI(navbarPage("Book Recommender by Polong Lin",
+   tabPanel("Search Engine",
+            h3("Want a new book but not sure which to get?"),
+            h4("Use this search engine to find other books that people enjoyed!"),
+            fluidRow("1. Search for a book title you've read."),
+            fluidRow("2. Press [Submit] to get some recommended books!"),
+            br(),
+            textInput('sentenceInputVar', 'Search: (Example: "da vinci", "the notebook")'),
+            actionButton('submitButton', 'Submit'),
+            br(),
+            br(),
+            br(),
+            textOutput("oRecommendationsFor"),
+            textOutput("oUserInput"),
+            br(),
+            tableOutput("oResults"),
+            textOutput("oSimExplanation")
+   ),
+    tabPanel("Data Source",
+        h5("Data and Creator Info"),
+        br(),
+        
+        fluidRow("This app uses data on the top 100 most-reviewed books from:"),
+        br(),
+        fluidRow("Improving Recommendation Lists Through Topic Diversification"),
+        fluidRow("Cai-Nicolas Ziegler, Sean M. McNee, Joseph A. Konstan, Georg Lausen; Proceedings of the 14th International World Wide Web Conference (WWW '05), May 10-14, 2005, Chiba, Japan. To appear."),
+        fluidRow("http://www2.informatik.uni-freiburg.de/~cziegler/BX/"),
+        br(),
+        fluidRow("Recommender system based on: http://blog.yhathq.com/posts/recommender-system-in-r.html"),
+        br(),
+        fluidRow("For more information, contact the creator of this app, Polong Lin."),
+        fluidRow("This app was created on Jan. 21, 2015 by Polong Lin. polong [dot] lin [at] gmail [dot] com.")
+    )
+))
